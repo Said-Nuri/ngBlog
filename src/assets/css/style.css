@@ -1,0 +1,32 @@
+html,
+div{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    height: auto;
+    min-height: 100% !important;
+}
+
+.post{
+    height: 200px;
+    border: 1px solid #6c87a8;
+}
+
+.myApp md-content .ext-content {
+    padding: 50px;
+    margin: 20px;
+    background-color: #FFF2E0; }
+
+md-content{
+    background-color: inherit;
+}
+
+md-nav-bar.md-default-theme .md-button._md-nav-button.md-unselected, md-nav-bar .md-button._md-nav-button.md-unselected {
+    color: rgb(212, 212, 212);
+}
+
+.md-button.md-default-theme.md-accent, .md-button.md-accent {
+    color: rgb(255, 232, 145);
+}
