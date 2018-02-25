@@ -71,13 +71,16 @@
                     <div class="post" layout="row">
                         <div flex="30" style="width: 140px; min-width: 140px; background-color: red"></div>
                         <div flex layout="column">
-                            <div class="post-header" flex="30" layout="row" layout-align="center center" style="background-color: sandybrown;">
+                            <div class="post-header" flex="30" layout="row" layout-align="center start" style="background-color: sandybrown; padding-top: 3px;">
                                 <span><b>Başlık</b></span>
                             </div>
-                            <div layout="row" class="post-summary" flex style="padding: 5px;">
-                                <md-content flex layout-padding style="overflow:hidden;">
+                            <div layout="row" class="post-summary" flex="50" style="padding: 3px;">
+                                <md-content flex style="overflow:hidden; padding: 3px">
                                     Lorem Ipsum, diasdasdasdasdasdasdasdasdasdasdzgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
                                 </md-content>
+                            </div>
+                            <div flex="20" layout="row" layout-align="start center" style="padding: 0 3px 0 3px">
+                                <span><b>Yazar:</b></span>
                             </div>
                         </div>
                     </div>
@@ -111,7 +114,7 @@
                         </div>
                     </div>
                     <div flex style="height: 15px;"></div>
-                    <div flex layout="column">
+                    <div id="popular-posts" flex layout="column">
                         <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
                             <div flex="none" style="width: 100px; background-color: orangered"></div>
                             <div flex layout="column" style="padding: 5px; height: 100%;">
