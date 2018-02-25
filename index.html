@@ -64,14 +64,17 @@
     <div flex layout="row" layout-align="center none">
         <div flex="100" flex-gt-xs="60" layout="row" layout-align="center none" >
             <div id="blog-post" flex="100" flex-gt-md="65" layout-padding style="padding-top: 10px; border: 3px solid #ffe275;">
-                <div flex layout="column" style="background-color: #e1e1e1;">
+                <div flex="none" layout="row" layout-align="start center" style="height: 50px;">
+                    <span><b>Başlık</b></span>
+                </div>
+                <div id="post-wrapper" flex layout="column" style="background-color: #e1e1e1;">
                     <div class="post" layout="row">
-                        <div flex="35" style="min-width: 50px; background-color: red"></div>
+                        <div flex="30" style="width: 140px; min-width: 140px; background-color: red"></div>
                         <div flex layout="column">
-                            <div id="post-header" flex="30" layout="row" layout-align="center center" style="background-color: sandybrown;">
+                            <div class="post-header" flex="30" layout="row" layout-align="center center" style="background-color: sandybrown;">
                                 <span><b>Başlık</b></span>
                             </div>
-                            <div layout="row" id="post-summary" flex style="padding: 5px;">
+                            <div layout="row" class="post-summary" flex style="padding: 5px;">
                                 <md-content flex layout-padding style="overflow:hidden;">
                                     Lorem Ipsum, diasdasdasdasdasdasdasdasdasdasdzgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
                                 </md-content>
@@ -81,13 +84,20 @@
                 </div>
             </div>
             <div id="sidebar" hide show-gt-md flex-gt-md="35" layout-padding style="padding-top: 10px; border: 3px solid #ffe275">
-                <div flex layout="column">
+                <div id="search-box" flex layout="column">
                     <div flex="none" style="height: 2px; background-color: #f1c40f"></div>
-                    <div flex="none" id="search" style="height:50px; margin: 15px 0 5px 0">
-                        <md-input-container flex style="padding: 0; margin: 15px 0; width: 100%">
-                            <label>Search</label>
-                            <input ng-model="user.title">
-                        </md-input-container>
+                    <div id="search-wrapper" flex="none" layout="row"  style="height:50px; margin: 15px 0 5px 0">
+                        <div flex="80" style="padding: 0 5px 0 5px">
+                            <md-input-container flex style="padding: 0; margin: 15px 0; width: 100%">
+                                <label>Search</label>
+                                <input ng-model="user.title">
+                            </md-input-container>
+                        </div>
+                        <div flex style="background-color: #ffe275">
+                            <md-button layout="row" layout-align="center center" style="height:100%; min-width: inherit; width: 100%; padding: 0; margin: 0; background-color: #ffe275;">
+                                <span>Ara</span>
+                            </md-button>
+                        </div>
                     </div>
                     <div flex="none" style="height: 2px; background-color: #f1c40f"></div>
                 </div>
