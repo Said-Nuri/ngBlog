@@ -30,3 +30,14 @@ md-nav-bar.md-default-theme .md-button._md-nav-button.md-unselected, md-nav-bar 
 .md-button.md-default-theme.md-accent, .md-button.md-accent {
     color: rgb(255, 232, 145);
 }
+
+.social-border{
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #000000;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
