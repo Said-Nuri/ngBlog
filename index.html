@@ -65,12 +65,19 @@
         <div flex="100" flex-gt-xs="60" layout="row" layout-align="center none" >
             <div id="blog-post" flex="100" flex-gt-md="65" layout-padding style="padding-top: 10px; border: 3px solid #ffe275;">
                 <div flex layout="column" style="background-color: #e1e1e1;">
-                    <div class="post"></div>
-                    <div class="post"></div>
-                    <div class="post"></div>
-                    <div class="post"></div>
-                    <div class="post"></div>
-                    <div class="post"></div>
+                    <div class="post" layout="row">
+                        <div flex="35" style="min-width: 50px; background-color: red"></div>
+                        <div flex layout="column">
+                            <div id="post-header" flex="30" layout="row" layout-align="center center" style="background-color: sandybrown;">
+                                <span><b>Başlık</b></span>
+                            </div>
+                            <div layout="row" id="post-summary" flex style="padding: 5px;">
+                                <md-content flex layout-padding style="overflow:hidden;">
+                                    Lorem Ipsum, diasdasdasdasdasdasdasdasdasdasdzgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
+                                </md-content>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="sidebar" hide show-gt-md flex-gt-md="35" layout-padding style="padding-top: 10px; border: 3px solid #ffe275">
@@ -161,13 +168,30 @@
     <div style="height: 100px; border: 2px solid yellow" layout="row" layout-align="center none">
         <div  flex="100" flex-gt-md="60" layout="row" layout-align="center none">
             <div flex="30" style="background-color: #ffe275">LOGO</div>
-            <div flex="70" layout="column" layout-align="center none">
-                <div flex="initial" style="height: 50px; background-color: greenyellow"></div>
+            <div id="email-subs" flex="70" layout="column" layout-align="center none">
+                <div flex="30" layout="row" layout-align="start center" layout-padding style="background-color: lightgreen;">
+                    <span>E-posta abonemiz olun</span>
+                </div>
+                <div id="email-box" flex="none" layout="row" style="background-color: #6c87a8; height: 50px;">
+                    <div flex="80" layout="row" layout-align="start center">
+                        <div flex style="background-color: #9499ff; padding: 0 10px 0 10px;">
+                            <md-input-container flex style="padding: 0; margin: 15px 0; width: 100%">
+                                <label>Search</label>
+                                <input ng-model="">
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div flex="20" layout="row" layout-align="center center">
+                        <md-button style="height:100%; min-width: inherit; width: 100%; padding: 0; margin: 0; background-color: #ffe275;">Abone Ol</md-button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div style="height: 60px; background-color: #333333;"></div>
+    <div layout="row" layout-align="center center" style="height: 60px; background-color: #333333;">
+        <span style="color: white; font-weight: 500; font-size: 12px;">Copyright © 2018 <span class="copyright">Blogish Style 2</span> All Right Reserved | Blogger Templates Created with  by MS Design TemplateMark</span>
+    </div>
 
     <script src="src/assets/js/angular.min.js"></script>
     <script src="src/assets/js/angular-animate.min.js"></script>
