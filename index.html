@@ -6,11 +6,14 @@
 
     <link rel="stylesheet" href="src/assets/css/angular-material.css">
     <link rel="stylesheet" href="src/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body ng-app="myApp" ng-strict-di>
     <div id="banner-wrap" layout="row" layout-align="center none" style="height: 120px; ">
         <div id="banner" flex="100" flex-gt-xs="60" layout="row" style="background-color: #6c87a8;">
-            <div flex="100" flex-gt-md="30"></div>
+            <div flex="100" layout="row" layout-align="center center" flex-gt-md="30" style="padding: 5px;">
+                <img style="height: 100%; width: 100%;" src="src/assets/img/logo.png" alt="logo">
+            </div>
             <div hide show-gt-md flex-gt-md="70" layout="column"  layout-align="start end">
                 <div id="social-wrapper" flex layout="row" layout-align="center start" style="height:40px; padding: 5px;">
                     <div class="social-border">
@@ -81,34 +84,7 @@
     <div flex layout="row" layout-align="center none">
         <div flex="100" flex-gt-xs="60" layout="row" layout-align="center none" >
             <div id="blog-tag" flex="100" flex-gt-md="65" style="padding-top: 10px; border: 3px solid #ffe275;">
-                <div flex="none" layout-padding layout="row" layout-align="start center" style="height: 50px;">
-                    <h4><b>Başlık</b></h4>
-                </div>
-                <div id="post-wrapper" layout-padding flex layout="column" style="background-color: #e1e1e1;">
-                    <div class="post" layout="row">
-                        <div flex="30" style="width: 140px; min-width: 140px; background-color: red"></div>
-                        <div flex layout="column">
-                            <div class="post-header" flex="30" layout="row" layout-align="center start" style="background-color: sandybrown; padding-top: 3px;">
-                                <h4>Başlık</h4>
-                            </div>
-                            <div layout="row" class="post-summary" flex="50" style="padding: 3px;">
-                                <md-content flex style="overflow:hidden; padding: 3px">
-                                    <p>
-                                        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
-                                    </p>
-                                </md-content>
-                            </div>
-                            <div flex="20" layout="row" layout-align="start center" style="padding: 0 3px 0 3px">
-                                <span><b>Yazar:</b></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div flex="none" layout="row" style="height: 50px; margin-top: 10px; border: 1px solid #FFE275">
-                    <div flex="30"></div>
-                    <div flex="50"></div>
-                    <div flex="20"></div>
-                </div>
+                <div ui-view ></div>
             </div>
             <div id="sidebar" hide show-gt-md flex-gt-md="35" layout-padding style="padding-top: 10px; border: 3px solid #ffe275">
                 <div id="search-box" flex layout="column">
@@ -236,7 +212,9 @@
     <script src="src/assets/js/angular-messages.min.js"></script>
 
     <script src="src/assets/js/angular-material.min.js"></script>
+    <script src="src/assets/js/angular-ui-router.min.js"></script>
     <script src="src/modules/app.module.js"></script>
     <script src="src/controllers/app.controller.js"></script>
+    <script src="src/routes/main.routes.js"></script>
 </body>
 </html>
