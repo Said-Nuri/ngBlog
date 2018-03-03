@@ -45,7 +45,9 @@
             </div>
         </div>
     </div>
-    <div flex layout="row" layout-align="center none">
+
+    <!--Navigation bar -->
+    <div id="navigation" flex layout="row" layout-align="center none">
         <div id="navbar" ng-controller="AppCtrl" hide show-gt-xs ng-cloak flex="100" flex-gt-xs="60" style="height: 50px; background-color: #666666;">
             <md-content >
                 <md-nav-bar
@@ -81,11 +83,37 @@
             </div>
         </div>
     </div>
-    <div flex layout="row" layout-align="center none">
+
+    <!-- SIDE PANEL-->
+    <div ng-controller="SideController" flex layout="row" layout-align="center none">
         <div flex="100" flex-gt-xs="60" layout="row" layout-align="center none" >
-            <div id="blog-tag" flex="100" flex-gt-md="65" style="padding-top: 10px; border: 3px solid #ffe275;">
+            <div id="page-container" flex="100" flex-gt-md="65" style="padding-top: 10px; border: 3px solid #ffe275;">
+                <div id="page-header-container" flex="none" layout-padding layout="row" layout-align="start center" style="height: 50px;">
+                    <h4><b>Başlık</b></h4>
+                </div>
                 <div ui-view ></div>
+                <div id="page-navigator-wrapper" flex="none" layout="row" style="height: 50px; margin-top: 10px; border: 1px solid #FFE275">
+                    <div id="page-navigator-pages" flex="30" layout="row" layout-align="start center">
+                        <div flex="none" layout="row" layout-align="center center" style="width: 100px; border: 1px solid #f1c40f;">
+                            <span>Page 1 of 3</span>
+                        </div>
+                        <div flex="none" layout="row" layout-align="center center" style="width: 50px; border: 1px solid #f1c40f;">
+                            <span>1</span>
+                        </div>
+                        <div flex="none" layout="row" layout-align="center center" style="width: 50px; border: 1px solid #f1c40f;">
+                            <span>2</span>
+                        </div>
+                        <div flex="none" layout="row" layout-align="center center" style="width: 50px; border: 1px solid #f1c40f;">
+                            <span>3</span>
+                        </div>
+                    </div>
+                    <div flex="50"></div>
+                    <div id="page-navigator-iterator" flex="20">
+                        <div></div>
+                    </div>
+                </div>
             </div>
+
             <div id="sidebar" hide show-gt-md flex-gt-md="35" layout-padding style="padding-top: 10px; border: 3px solid #ffe275">
                 <div id="search-box" flex layout="column">
                     <div flex="none" style="height: 2px; background-color: #f1c40f"></div>
@@ -97,7 +125,7 @@
                             </md-input-container>
                         </div>
                         <div flex style="background-color: #ffe275">
-                            <md-button layout="row" layout-align="center center" style="height:100%; min-width: inherit; width: 100%; padding: 0; margin: 0; background-color: #ffe275;">
+                            <md-button ng-click="search()" layout="row" layout-align="center center" style="height:100%; min-width: inherit; width: 100%; padding: 0; margin: 0; background-color: #ffe275;">
                                 <img src="src/assets/img/ic_search.png" alt="search">
                             </md-button>
                         </div>
@@ -152,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="labels" style="height: 120px; margin-top:5px;">
+                <div id="blog-archive" style="height: 120px; margin-top:5px;">
                     <div flex style="height: 30px; ">
                         <div style="height: 2px; background-color: #f1c40f"></div>
                         <div layout="row" layout-align="center center" style="background-color: #ffffff">
@@ -163,11 +191,11 @@
                     </div>
                     <div flex style="height: 15px;"></div>
                 </div>
-                <div id="social" style="height: 120px; margin-top:5px;">
+                <div id="label" style="height: 120px; margin-top:5px;">
                     <div flex style="height: 30px; ">
                         <div style="height: 2px; background-color: #f1c40f"></div>
                         <div layout="row" layout-align="center center" style="background-color: #ffffff">
-                            <div layout="row" layout-align="center center" style="height: 100%; width: 150px; background-color: #f1c40f; color: #ffffff; font: 500 14px 'Rubik', arial, sans-serif;">
+                            <div layout="column" layout-align="center center" style="height: 100%; width: 150px; background-color: #f1c40f; color: #ffffff; font: 500 14px 'Rubik', arial, sans-serif;">
                                 <b>LABELS</b>
                             </div>
                         </div>
