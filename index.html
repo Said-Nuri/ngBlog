@@ -132,76 +132,9 @@
                     </div>
                     <div flex="none" style="height: 2px; background-color: #f1c40f"></div>
                 </div>
-                <div id="popular_post" style="height: 600px; margin-top:5px;">
-                    <div flex style="height: 30px; ">
-                        <div style="height: 2px; background-color: #f1c40f"></div>
-                        <div layout="row" layout-align="center center" style="background-color: #ffffff">
-                            <div layout="row" layout-align="center center" style="height: 100%; width: 150px; background-color: #f1c40f; color: #ffffff; font: 500 14px 'Rubik', arial, sans-serif;">
-                                <b>POPULAR POSTS</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div flex style="height: 15px;"></div>
-                    <div id="popular-posts" flex layout="column">
-                        <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
-                            <div flex="none" style="width: 100px; background-color: orangered"></div>
-                            <div flex layout="column" style="padding: 5px; height: 100%;">
-                                <div flex="40"><b>başlık başlık başlık başlık</b></div>
-                                <div flex="60"><span>dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </span></div>
-                            </div>
-                        </div>
-                        <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
-                            <div flex="none" style="width: 100px; background-color: orangered"></div>
-                            <div flex layout="column" style="padding: 5px; height: 100%;">
-                                <div flex="40"><b>başlık başlık başlık başlık</b></div>
-                                <div flex="60"><span>dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </span></div>
-                            </div>
-                        </div>
-                        <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
-                            <div flex="none" style="width: 100px; background-color: orangered"></div>
-                            <div flex layout="column" style="padding: 5px; height: 100%;">
-                                <div flex="40"><b>başlık başlık başlık başlık</b></div>
-                                <div flex="60"><span>dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </span></div>
-                            </div>
-                        </div>
-                        <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
-                            <div flex="none" style="width: 100px; background-color: orangered"></div>
-                            <div flex layout="column" style="padding: 5px; height: 100%;">
-                                <div flex="40"><b>başlık başlık başlık başlık</b></div>
-                                <div flex="60"><span>dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </span></div>
-                            </div>
-                        </div>
-                        <div flex="none" layout="row" style="height: 110px; background-color: #ffdb89; padding: 5px">
-                            <div flex="none" style="width: 100px; background-color: orangered"></div>
-                            <div flex layout="column" style="padding: 5px; height: 100%;">
-                                <div flex="40"><b>başlık başlık başlık başlık</b></div>
-                                <div flex="60"><span>dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="blog-archive" style="height: 120px; margin-top:5px;">
-                    <div flex style="height: 30px; ">
-                        <div style="height: 2px; background-color: #f1c40f"></div>
-                        <div layout="row" layout-align="center center" style="background-color: #ffffff">
-                            <div layout="row" layout-align="center center" style="height: 100%; width: 150px; background-color: #f1c40f; color: #ffffff; font: 500 14px 'Rubik', arial, sans-serif;">
-                                <b>BLOG ARCHIVE</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div flex style="height: 15px;"></div>
-                </div>
-                <div id="label" style="height: 120px; margin-top:5px;">
-                    <div flex style="height: 30px; ">
-                        <div style="height: 2px; background-color: #f1c40f"></div>
-                        <div layout="row" layout-align="center center" style="background-color: #ffffff">
-                            <div layout="column" layout-align="center center" style="height: 100%; width: 150px; background-color: #f1c40f; color: #ffffff; font: 500 14px 'Rubik', arial, sans-serif;">
-                                <b>LABELS</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div flex style="height: 15px;"></div>
-                </div>
+                <div id="popular_post" ng-include="'src/partials/sidebar.popular_posts.html'" style="height: 600px; margin-top:5px;"></div>
+                <div id="blog-archive" ng-include="'src/partials/sidebar.blog_archive.html'" style="height: 120px; margin-top:5px;"></div>
+                <div id="labels" ng-include="'src/partials/sidebar.labels.html'" style="height: 120px; margin-top:5px;"></div>
             </div>
         </div>
     </div>
